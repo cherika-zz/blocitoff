@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 	    devise_parameter_sanitizer.for(:sign_up) << :name
 	  end
 
-  # def hello
-  # 	render text: "<h1>Hello</h1><p>Welcome home</p>"
-  # end
+	  def after_sign_in_path_for(arg)
+	  	current_user
+	  end
 end
