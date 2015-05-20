@@ -13,7 +13,7 @@
        <ul class='nav nav-tabs'>
         <!-- tabs -->
         <li><%= link_to "Bloccitoff", root_path %></li>
-        <li><%= link_to "To Do", user_path(current_user) %></li>
+        <li><%= link_to "To Do", user_path(current_user) if current_user %></li>
         
 
         <div class="pull-right user-info">
