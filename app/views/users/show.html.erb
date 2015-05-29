@@ -1,2 +1,17 @@
-<h1><%= @user.name %></h1>
-<h1><%= @user.email %></h1>
+<h1><%= current_user.name %></h1>
+<h1><%= current_user.email %></h1>
+
+<%= render partial: 'items/form' %>
+
+
+<!-- take each item and display the name inside of the tags -->
+<%# @items.each do |item| %>
+	<!-- <p><%#= item.name %></p> -->
+<%# end %>
+
+<%#= render partial: 'items/item', collection: @items %>
+
+<!-- line 15 is the same as 12; singular 'item' _item.html.erb -->
+<%= render @items %>
+
+<%#= the local variable name will be the same as the partial name unless we use 'as: :item' %>

@@ -12,7 +12,8 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = User.find(params[:id])
+		# if you use instance variables in the view, they have to be set in the controller.
+		@items = current_user.items 
 	end
 
 	def index
