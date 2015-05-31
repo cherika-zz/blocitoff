@@ -12,6 +12,21 @@ class ItemsController < ApplicationController
   	end
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "Your item was marked complete."
+    else
+      flash[:notice] = "There was an error. Try again."
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   private
 
   def item_params
