@@ -1,9 +1,12 @@
-<p id='item-<%=item.id%>'><%= link_to "", [current_user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
-  <%= item.name %>
+<ul>
+  <p id='item-<%=item.id%>'><%= link_to "", [current_user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
+    <%= item.name %>
     <small>
       <%= item.days_left %> days left before your item is automatically deleted
-    </small> 
-</p>
+    </small>
+  </p>
+</ul> 
+
 
 
 <!-- data: { confirm: "Are you sure?" } -->
