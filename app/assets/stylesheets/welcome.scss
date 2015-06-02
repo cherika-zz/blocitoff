@@ -1,21 +1,81 @@
+$white_opaque: rgba(250, 250, 250, .3);
+$dark: #1F7972;
+
 h1 {
-	color: blue;
+color: purple;
+text-align: center;
+font-size: 15px;
 }
 
 p#index-title {
-	text-align: center;
-	font-size: 15px;
-	color: blue;
+text-align: center;
+font-size: 15px;
+color: blue;
 }
-
 
 section {
-	background: #5998ff;
-	border-style: solid;
-	border-width: 5px;
-	margin: 5px 5px 5px 5px;
-	padding: 5px 5px 5px 5px;
+background: #5998ff;
+border-style: solid;
+border-width: 5px;
+margin: 5px 5px 5px 5px;
+padding: 5px 5px 5px 5px;
 }
+
+* {
+	box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+ 	height: 100%;
+  background:         linear-gradient(40deg, #FF66FF 10%, #99FF66 100%);
+  font-family: 'Lato', sans-serif;
+}
+
+
+.container {
+	width: 55%;
+	max-width: 800px;
+	background: $white_opaque;
+	margin: 3em auto 0 auto;
+	border-radius: 7px;
+	-webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
+	box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+	padding: 1em 0;
+}
+
+
+input[type="text"], textarea {
+	width: 100%;
+	margin: .5em 2% 1em 0;
+	display: inline-block;
+	outline: none;
+	background: rgba(250,250,250,.4);
+	border: none;
+	height: 40px;
+	border-radius: 4px;
+	padding: 1em 2em;
+}
+
+input[type="submit"] {
+	background: white;
+	outline: none;
+	border: none;
+	height: 40px;
+	border-radius: 4px;
+	width: 25%;
+	display: inline-block;
+	transition: all .4s ease-in-out;
+	cursor: pointer;
+	color: $dark;
+	&:hover {
+		background: $dark;
+		color: white;
+	}
+}
+
 
 
 
