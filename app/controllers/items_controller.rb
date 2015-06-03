@@ -27,6 +27,11 @@ class ItemsController < ApplicationController
     end
   end
 
+  # def expire
+  #   call_rake :delete_items
+  #   redirect_to current_user
+  # end
+
   private
 
   def item_params

@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
 	  def after_sign_in_path_for(arg)
 	  	current_user
 	  end
+
+    # def call_rake(task)
+    #   system "rake #{task} &"
+    # end
 end
