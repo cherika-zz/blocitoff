@@ -17,7 +17,11 @@ class UsersController < ApplicationController
 	end
 
 	def index
-		@user = User.all
+		if current_user && current_user.email == 'fake2@example.com'
+			@users = User.all
+		else
+			redirect_to :root
+		end
 	end
 
 	private
