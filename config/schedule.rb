@@ -4,11 +4,6 @@ every 1.day, :at => '8:15 pm' do
   rake "todo:delete_items"
 end
 
-set :environment, "production"
-
-every 1.day, :at => '8:40 pm' do
-  rake "todo:delete_items"
-end
 
 # Use this file to easily define all of your cron jobs.
 #
